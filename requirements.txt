@@ -21,3 +21,4 @@ unstructured_inference
 
 langchain-huggingface 
 sentence-transformers
+reflex==0.8.28.post1
