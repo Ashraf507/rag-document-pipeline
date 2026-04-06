@@ -1,9 +1,43 @@
-*.py[cod]
-*.db
-.states
-assets/external/
-.web
-venv/
+# Environment variables — NEVER commit your real .env
 .env
-chroma_db/
+
+# Python cache
 __pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Uploaded files (user data, not code)
+uploaded_files/
+
+# ChromaDB data (auto-generated)
+chroma_db/
+
+# Reflex build artifacts
+.web/
+.states/
+
+# Pytest cache
+.pytest_cache/
+*.coverage
+htmlcov/
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+diagnostic_logs.txt
+
+# Backup files
+*.bak

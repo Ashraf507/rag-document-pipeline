@@ -1,26 +1,33 @@
-# LangChain Core
-langchain
-langchain-core
-langchain_community
+# ── Core Python web framework ──────────────────────────────────────────────
+fastapi==0.115.0          # API framework
+uvicorn==0.30.6           # ASGI server to run FastAPI
+python-multipart==0.0.9   # Required for file upload support in FastAPI
 
-#Groq
-langchain-groq
+# ── LangChain — RAG orchestration ─────────────────────────────────────────
+langchain==0.3.0
+langchain-core==0.3.0
+langchain-community==0.3.0
+langchain-groq==0.2.0         # Groq LLM integration
+langchain-huggingface==0.1.0  # HuggingFace embeddings
 
-# Environment Variable Management
-python-dotenv
+# ── Vector database ────────────────────────────────────────────────────────
+chromadb==0.5.0           # In-memory + persistent vector store
 
-#streamlit
-streamlit
+# ── Embeddings model ───────────────────────────────────────────────────────
+sentence-transformers==3.0.0  # Loads all-MiniLM-L6-v2 locally
 
-pypdf
-pymupdf
-unstructured
-pdfminer.six 
-unstructured_pytesseract 
-unstructured_inference
-docx2txt
-python-pptx
+# ── Document loaders ───────────────────────────────────────────────────────
+pymupdf==1.24.0           # PDF loading (fast and accurate)
+docx2txt==0.8             # DOCX loading
+python-pptx==1.0.0        # PPTX loading
+unstructured==0.15.0      # PPTX/PPT fallback loader
 
-langchain-huggingface 
-sentence-transformers
+# ── Environment variable management ───────────────────────────────────────
+python-dotenv==1.0.0      # Loads .env file into os.getenv()
+
+# ── Testing ────────────────────────────────────────────────────────────────
+pytest==8.3.0             # Test runner
+httpx==0.27.0             # Required by FastAPI TestClient
+
+# ── Reflex frontend (optional — only needed if running the web UI) ─────────
 reflex==0.8.28.post1

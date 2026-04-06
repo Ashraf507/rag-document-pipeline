@@ -1,7 +1,7 @@
 import os
 import reflex as rx
 from typing import List, Dict
-from RAG.backend.rag import get_answer, add_documents_to_db, clear_db
+from RAG.backend.rag import get_answer, add_document_to_db, clear_document_db
 
 # Descriptive labels for the UI selection
 MODEL_OPTIONS = [
@@ -47,7 +47,7 @@ class ChatState(rx.State):
                 file_object.write(upload_data)
             
             # process document logic
-            add_documents_to_db(outfile_path)
+            add_document_to_db(outfile_path)
             new_files.append(file.filename)
             
         self.uploaded_files = self.uploaded_files + new_files
@@ -79,4 +79,4 @@ class ChatState(rx.State):
     def reset_session(self):
         self.history = []
         self.uploaded_files = []
-        clear_db()
+        clear_document_db()
